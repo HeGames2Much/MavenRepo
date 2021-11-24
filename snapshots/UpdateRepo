@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+#------------------------------------------------------------------------------
+# Path         - /usr/bin/UpdateRepo
+# GitHub       - https://github.com/The-Repo-Club/
+# Author       - The-Repo-Club [wayne6324@gmail.com]
+# Start On     - Wed 24 Nov 22:00:31 GMT 2021
+# Modified On  - Wed 24 Nov 22:00:31 GMT 2021
+#------------------------------------------------------------------------------
+
+echo "[Dependency installer]"
+read -p "What is your dependency's file name? " filename
+
+if [ "$filename" = "" ]; then
+    return
+fi
+
+read -p "What is your dependency's group ID? " groupID
+read -p "What is your dependency's artifact ID? " artifactID
+read -p "What is your dependency's version? " version
+
+mvn install:install-file -DlocalRepositoryPath=repo -DcreateChecksum=true -Dpackaging=jar -Dfile=$filename -DgroupId=$groupID -DartifactId=$artifactID -Dversion=$version
+
+echo "[Dependency installed!]"
