@@ -14,7 +14,7 @@
 ```
         <dependency>
             <groupId>club.therepo</groupId>
-            <artifactId>CustomEnchantments</artifactId>
+            <artifactId>customenchantments</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
@@ -22,7 +22,7 @@
 ```
         <dependency>
             <groupId>club.therepo</groupId>
-            <artifactId>ApproveRules</artifactId>
+            <artifactId>approverules</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
