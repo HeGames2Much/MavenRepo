@@ -19,6 +19,6 @@ read -p "What is your dependency's group ID? " groupID
 read -p "What is your dependency's artifact ID? " artifactID
 read -p "What is your dependency's version? " version
 
-mvn install:install-file -DlocalRepositoryPath=repo -DcreateChecksum=true -Dpackaging=jar -Dfile=$filename -DgroupId=$groupID -DartifactId=$artifactID -Dversion=$version
+mvn install:install-file -DlocalRepositoryPath=snapshot -DcreateChecksum=true -Dpackaging=jar -Dfile=$filename -DgroupId=$groupID -DartifactId=$artifactID -Dversion=$version
 
 echo "[Dependency installed!]"
